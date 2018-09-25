@@ -15,6 +15,7 @@ describe 'Book' do
     it 'has an author name' do
       book.author = "Agatha Christie"
       expect(book.author).to eq("Agatha Christie")
+
     end
 
     it 'has a page count' do
@@ -25,14 +26,19 @@ describe 'Book' do
     it 'has a genre' do
       book.genre = "Mystery"
       expect(book.genre).to eq("Mystery")
+
     end
+
   end
 
   describe '#turn_page' do
     it 'can turn the page' do
       expect($stdout).to receive(:puts).with("Flipping the page...wow, you read fast!")
       book = Book.new("The World According to Garp")
-      book.turn_page 
+      book.turn_page
+
     end
+
   end
+
 end
